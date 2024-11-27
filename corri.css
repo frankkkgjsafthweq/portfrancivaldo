@@ -1,0 +1,133 @@
+/* Resetando margens e padding para evitar inconsistências */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo a fonte padrão */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container geral */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #007BFF;
+  text-transform: uppercase;
+}
+
+/* Seções */
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+section strong {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Estilo para as imagens */
+.imagem img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Estilo para as listas (se houver) */
+ul {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Adicionando um rodapé */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Melhorando a responsividade */
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+
+  header h1 {
+      font-size: 2rem;
+  }
+
+  section h2 {
+      font-size: 1.5rem;
+  }
+
+  section p {
+      font-size: 1rem;
+  }
+}
+/* Estilos do botão Sair no cabeçalho */
+.logout-btn {
+  background-color: #4CAF50; /* Cor verde suave */
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px; /* Aumenta o tamanho do botão de forma moderada */
+  border: none;
+  border-radius: 25px; /* Borda arredondada */
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease; /* Suaviza a transição do hover */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.logout-btn:hover {
+  background-color: #45a049; /* Cor mais escura quando passa o mouse */
+  transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+.logout-btn:focus {
+  outline: none; /* Remove o contorno ao clicar */
+}
+
+.logout-btn:active {
+  background-color: #3e8e41; /* Cor ainda mais escura quando pressionado */
+}

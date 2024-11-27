@@ -1,0 +1,171 @@
+/* Estilo global para o corpo */
+body {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #8e44ad, #3498db, #00bcd4, #1e88e5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden; /* Prevenir barra de rolagem horizontal */
+}
+
+/* Animação do fundo (gradiente dinâmico) */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilo da navegação */
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9800;
+}
+
+/* Conteúdo principal */
+.content {
+    margin-top: 80px; /* Para evitar sobreposição com a navegação */
+    width: 90%;
+    max-width: 1200px;
+    padding-bottom: 100px; /* Espaço extra para garantir que a barra de rolagem apareça */
+}
+
+/* Estilo das seções (EIXO I, II, III) */
+.eixo {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.eixo h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo das imagens */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.images img {
+    max-width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito de hover nas imagens */
+.images img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .eixo h2 {
+        font-size: 2em;
+    }
+
+    a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 1em;
+    }
+
+    .eixo h2 {
+        font-size: 1.5em;
+    }
+}
+/* Estilos do botão Sair no cabeçalho */
+.logout-btn {
+    background-color: #4CAF50; /* Cor verde suave */
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px; /* Aumenta o tamanho do botão de forma moderada */
+    border: none;
+    border-radius: 25px; /* Borda arredondada */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Suaviza a transição do hover */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .logout-btn:hover {
+    background-color: #45a049; /* Cor mais escura quando passa o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+  }
+  
+  .logout-btn:focus {
+    outline: none; /* Remove o contorno ao clicar */
+  }
+  
+  .logout-btn:active {
+    background-color: #3e8e41; /* Cor ainda mais escura quando pressionado */
+  }
+  

@@ -1,0 +1,158 @@
+/* Resetando margens e padding para evitar inconsistências */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Terminal Loader */
+.terminal-loader {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.terminal-title {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.terminal-controls .control {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 5px;
+}
+
+.terminal-controls .close {
+  background-color: red;
+}
+
+.terminal-controls .minimize {
+  background-color: yellow;
+}
+
+.terminal-controls .maximize {
+  background-color: green;
+}
+
+.text {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Botão de Trabalhos */
+.center1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.works-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.works-button:hover {
+  background-color: #0056b3;
+}
+
+.works-button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Redes sociais */
+.redes {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.redes a {
+  margin: 0 15px;
+}
+
+.redes svg {
+  transition: transform 0.3s ease;
+}
+
+.redes svg:hover {
+  transform: scale(1.2);
+}
+
+/* Notificação */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.notification .notiglow,
+.notification .notiborderglow {
+  width: 100%;
+  height: 4px;
+  background: #007BFF;
+  margin-bottom: 10px;
+}
+
+.notititle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.notibody {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .terminal-loader {
+      max-width: 100%;
+  }
+
+  .works-button {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .redes svg {
+      width: 40px;
+      height: 40px;
+  }
+}

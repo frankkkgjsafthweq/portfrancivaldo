@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematica</title>
+    <link rel="stylesheet" href="mat.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#">Atividades</a></li>
+        </ul>
+    </nav>
+    <button class="logout-btn">Sair</button>
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Seção Eixo I -->
+        <section class="eixo">
+            <h2>EIXO I</h2>
+            <div class="images">
+                <img src="./img/grafico.jpg" alt="Imagem Eixo I" onclick="openModal(this)">
+                <img src="./img/Francivaldo (16).png" alt="Imagem Eixo I" onclick="openModal(this)">
+                <img src="./img/fra.jpeg" alt="Imagem Eixo I" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <!-- Seção Eixo II -->
+        <section class="eixo">
+            <h2>EIXO II</h2>
+            <div class="images">
+                <img src="./img/Francivaldo.png" alt="Imagem Eixo II" onclick="openModal(this)">
+                <img src="./img/Francivaldo (3).png" alt="Imagem Eixo II" onclick="openModal(this)">
+                <img src="./img/Francivaldo (2).png" alt="Imagem Eixo II" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <!-- Seção Eixo III -->
+        <section class="eixo">
+            <h2>EIXO III</h2>
+            <div class="images">
+                <img src="./img/Cópia de Cópia de Cópia de TIMBRADO (2) (1) (1).png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/Cópia de Cópia de Cópia de TIMBRADO (2) (6) (1).png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/Cópia de Cópia de Cópia de TIMBRADO (2) (7) (1).png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/Cópia de Cópia de Cópia de TIMBRADO (2) (8) (1).png" alt="Imagem Eixo III" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <div class="eixo">
+            <h2>EIXO IV</h2>
+            <div class="images">
+                <img src="./img/Francivaldo (35).png" alt="Timbrado Eixo IV" onclick="openModal(this)">
+                <img src="./img/Francivaldo (36).png" alt="Timbrado Eixo III" onclick="openModal(this)">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal de Imagem -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Função para abrir a imagem no modal
+        function openModal(img) {
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var captionText = document.getElementById('caption');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
+ 
+        document.querySelector('.logout-btn').addEventListener('click', function() {
+            // Redireciona para uma página de logout ou qualquer outra ação desejada
+            window.location.href = 'trab.html'; // Exemplo de redirecionamento
+        });
+    </script>
+
+</body>
+</html>

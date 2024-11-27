@@ -1,0 +1,137 @@
+/* Resetando margens e padding para evitar inconsistências */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho e navegação */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Seção do currículo */
+.curriculo {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.curriculo h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.curriculo p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.curriculo-img img {
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .curriculo h1 {
+        font-size: 2rem;
+    }
+
+    .curriculo p {
+        font-size: 1rem;
+    }
+
+    .curriculo-img img {
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+/* Estilos do botão Sair no cabeçalho */
+.logout-btn {
+    background-color: #4CAF50; /* Cor verde suave */
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px; /* Aumenta o tamanho do botão de forma moderada */
+    border: none;
+    border-radius: 25px; /* Borda arredondada */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Suaviza a transição do hover */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .logout-btn:hover {
+    background-color: #45a049; /* Cor mais escura quando passa o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+  }
+  
+  .logout-btn:focus {
+    outline: none; /* Remove o contorno ao clicar */
+  }
+  
+  .logout-btn:active {
+    background-color: #3e8e41; /* Cor ainda mais escura quando pressionado */
+  }
+  

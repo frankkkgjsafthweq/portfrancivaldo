@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natureza</title>
+    <link rel="stylesheet" href="nat.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#">Atividades</a></li>
+        </ul>
+    </nav>
+    <button class="logout-btn">Sair</button>
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Seção Eixo I -->
+        <section class="eixo">
+            <h2>EIXO I</h2>
+            <div class="images">
+                <img src="./img/ingles.jpg" alt="Imagem Eixo I" onclick="openModal(this)">
+                <img src="./img/Francivaldo (13).png" alt="Imagem Eixo I" onclick="openModal(this)">
+                <img src="./img/Francivaldo (12).png" alt="Imagem Eixo I" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <!-- Seção Eixo II -->
+        <section class="eixo">
+            <h2>EIXO II</h2>
+            <div class="images">
+                <img src="./img/natureza.jpg" alt="Imagem Eixo II" onclick="openModal(this)">
+                <img src="./img/Francivaldo (14).png" alt="Imagem Eixo II" onclick="openModal(this)">
+                <img src="./img/Francivaldo (15).png" alt="Imagem Eixo II" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <!-- Seção Eixo III -->
+        <section class="eixo">
+            <h2>EIXO III</h2>
+            <div class="images">
+                <img src="./img/1.png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/2.png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/3.png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/4.png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/5.png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/6.png" alt="Imagem Eixo III" onclick="openModal(this)">
+                <img src="./img/13.png" alt="Imagem Eixo III" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <section class="eixo">
+            <h2>EIXO IV</h2>
+            <div class="images">
+                <img src="./img/Francivaldo (40).png" alt="Imagem Eixo IV" onclick="openModal(this)">
+                <img src="./img/Francivaldo (41).png" alt="Imagem Eixo IV" onclick="openModal(this)">
+                <img src="./img/Francivaldo (42).png" alt="Imagem Eixo IV" onclick="openModal(this)">
+                <img src="./img/Francivaldo (43).png" alt="Imagem Eixo IV" onclick="openModal(this)">
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de Imagem -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Função para abrir a imagem no modal
+        function openModal(img) {
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var captionText = document.getElementById('caption');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
+        document.querySelector('.logout-btn').addEventListener('click', function() {
+            // Redireciona para uma página de logout ou qualquer outra ação desejada
+            window.location.href = 'trab.html'; // Exemplo de redirecionamento
+        });
+    </script>
+
+</body>
+</html>

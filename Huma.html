@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanas</title>
+    <link rel="stylesheet" href="huma.css">
+</head>
+<body>
+    <!-- Barra de navegação fixa no topo -->
+    <nav>
+        <ul>
+            <li>
+                <p>
+                    Atividades
+                </p>
+            </li>
+        </ul>
+    </nav>
+    <button class="logout-btn">Sair</button>
+    <!-- Conteúdo principal da página -->
+    <div class="content">
+        <!-- Seção Eixo I -->
+        <div class="eixo">
+            <h2>EIXO I</h2>
+            <div class="images">
+                <img src="./img/mitomitologia.jpg" alt="Mito Mitologia" onclick="openModal(this)">
+                <img src="./img/marcas.jpg" alt="Marcas" onclick="openModal(this)">
+                <img src="./img/Francivaldo (10).png" alt="Francivaldo" onclick="openModal(this)">
+            </div>
+        </div>
+
+        <!-- Seção Eixo II -->
+        <div class="eixo">
+            <h2>EIXO II</h2>
+            <div class="images">
+                <img src="./img/Francivaldo (1).png" alt="Francivaldo Eixo II" onclick="openModal(this)">
+                <img src="./img/Francivaldo (8).png" alt="Francivaldo Eixo II" onclick="openModal(this)">
+            </div>
+        </div>
+
+        <!-- Seção Eixo III -->
+        <div class="eixo">
+            <h2>EIXO III</h2>
+            <div class="images">
+                <img src="./img/Cópia de Cópia de Cópia de TIMBRADO (2) (9).png" alt="Timbrado Eixo III" onclick="openModal(this)">
+                <img src="./img/Cópia de Cópia de Cópia de TIMBRADO (2) (4) (1).png" alt="Timbrado Eixo III" onclick="openModal(this)">
+            </div>
+        </div>
+    </div>
+
+    <div class="eixo">
+        <h2>EIXO IV</h2>
+        <div class="images">
+            <img src="./img/Francivaldo (37).png" alt="Timbrado Eixo IV" onclick="openModal(this)">
+            <img src="./img/Francivaldo (38).png" alt="Timbrado Eixo IV" onclick="openModal(this)">
+            <img src="./img/Francivaldo (39).png" alt="Timbrado Eixo IV" onclick="openModal(this)">
+        </div>
+    </div>
+</div>
+    
+    <!-- Modal de Imagem -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Função para abrir a imagem no modal
+        function openModal(img) {
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var captionText = document.getElementById('caption');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
+        document.querySelector('.logout-btn').addEventListener('click', function() {
+            // Redireciona para uma página de logout ou qualquer outra ação desejada
+            window.location.href = 'trab.html'; // Exemplo de redirecionamento
+        });
+    </script>
+
+</body>
+</html>
